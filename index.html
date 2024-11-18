@@ -15,14 +15,39 @@
 
     h1, h2, h3 {
       font-family: "Lobster", sans-serif;
-      font-size: 4rem;
+    }
+
+    h1 {
+      font-size: 6rem;
     }
 
     #logo { height: 25em; margin: -2em;}
 
     footer {
       font-style: italic;
+      font-size: 0.8em;
       color: #353535;
+    }
+
+    div.contentGrid {
+      display: grid;
+      column-gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1200px;
+    }
+
+    div.contentGrid section,  div.contentGrid aside {
+      grid: auto;
+    }
+
+    .welcome {
+      margin-bottom: -2.5em;
+    }
+
+    .calendar {
+      margin-bottom: 2em;
     }
 
   </style>
@@ -30,16 +55,27 @@
 </head>
 
 <body>
+
   <header>
     <img id="logo" src="assets/botc_se.png" alt="Logga för BotC Sverige">
   </header>
+
+  <div class="contentGrid">
+
   <section>
-  <p>
-    <h2>Välkommen till BotC Sverige!</h2>
-    Vi är en grupp som spelar Blood on the Clocktower, oftast online.
-    Gå gärna med i våran <a href="https://discord.gg/euD77jTtCz">Discordserver</a> och spela med oss!
-  </p>
-  </section>
+    <h2 class="welcome">Välkommen till</h2>
+    <h1>BotC Sverige</h1>
+
+    <p>
+      Vi är en grupp som spelar Blood on the Clocktower, oftast online.
+      Gå gärna med i våran <a href="https://discord.gg/euD77jTtCz">Discordserver</a> och spela med oss!
+    </p>
+    </section>
+    <aside class="calendar">
+      <h3>Nästa spel:</h3>
+      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FStockholm&showPrint=0&hl=sv&mode=AGENDA&showTabs=0&showNav=0&title&src=ZjJhNTU2ZDEzOWY3YjdlMzZiZTA2NDdmMjg1ODk3YjdiYTk2MDcxOTcwYmM0YTEwZWFkZWZjOGQ0OWYzYmRjMUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F09300" style="border-width:0" width="400" height="600" frameborder="0" scrolling="no"></iframe>  
+    </aside>
+  </div>
 
 
   <footer>
